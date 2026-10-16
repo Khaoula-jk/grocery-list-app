@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+// include 'includes/auth.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +11,16 @@ session_start();
   <title>HomePage</title>
 </head>
 <body>
-  <button id="logoutButton" type="button" onclick="window.location.href='logout.php'">Log Out</button>
+  <div class="logout">
+    <button id="logoutButton" type="button" onclick="window.location.href='logout.php'">Log Out</button>
+  </div>
+  <div class="items-list">
+    <h2>Items list</h2>
+    <div class="row">
+      <input type="text" id="input-box" placeholder="Add your item">
+      <button>Add</button>
+    </div>
+    
+  </div>
 </body>
 </html>
