@@ -1,5 +1,6 @@
 <?php
 include 'config.php';
+session_start();
 
 if (isset($_POST['signUp'])){
   $username = $_POST['username'];
@@ -16,6 +17,7 @@ if (isset($_POST['signUp'])){
 
     if($connect->query($insert_query) == TRUE){
       header('location: index.php');
+      exit();
     }else{
       echo "Error: ".$connect->error;
     }
@@ -32,11 +34,12 @@ if(isset($_POST['signIn'])){
   if($result->num_rows < 1){
     echo "A User with this Email doesn't exist !";
   }else{
-    session_start();
     $row = $result->fetch_assoc();
-    $_SESSION['email'] = $row['email'];
     $hash = $row['password'];
     if(password_verify($password, $hash)){
+      session_regenerate_id(true);
+      $_SESSION['user_id'] = $row['user_id'];
+      $_SESSION['email'] = $row['email'];
       header('location: index.php');
       exit();
     }else{

@@ -108,6 +108,29 @@ input:focus~label{
   text-decoration: underline;
   color: blue;
 }
+.logout{
+  display: flex;
+  justify-content: flex-start;
+}
+.logout-button{
+  font-size: 1.1rem;
+  padding: 10px 7px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  top: -3em;
+  color: white;
+  font-size: 15px;
+  background-color: #9d71e8;
+  cursor: pointer;
+  transition: 0.9s;
+}
+.logout-button:hover{
+  color: #9d71e8;
+  background-color: white;
+}
 .items-list{
   width: 100%;
   max-width: 540px;
@@ -147,4 +170,29 @@ input:focus~label{
   cursor: pointer;
   border-radius: 40px;
 }
-
+li{
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  background-color: #ffe5f9;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+li .item-name{
+  padding: 15px;
+  padding-right: 0;
+  flex-grow: 1;
+  color: rgba(0, 0, 0, 0.767);
+}
+li button{
+  padding: 3px;
+  border: none;
+  background: none;
+  color: #ff2600;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

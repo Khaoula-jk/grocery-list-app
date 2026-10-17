@@ -17,9 +17,6 @@
       <div class="input-group">
         <input type="password" name="password" id="password" placeholder="Password" required>
       </div>
-      <p class="recover">
-        <a href="#">Recover Password</a>
-      </p>
       <input type="submit" class="btn" value="Sign In" name="signIn">
     </form>
     <div class="links">
