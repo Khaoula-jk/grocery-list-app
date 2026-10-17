@@ -19,4 +19,19 @@ Built as a side project to practice full-stack CRUD with authentication.
  4. Copy the project folder into htdocs/
  5. Open http://localhost/grocery-list
 ## Screenshots
+- Sign Up Form
 ![Sign Up Form](screenshots/register.png)
+
+- Sign In Form
+![sign in](screenshots/signin.png)
+
+- HomePage
+![homepage](screenshots/homepage.png)
+
+## What I'd Add Next
+- Edit item names in place(currently: delete + re-add)
+- Mark items as bought
+- Per-user item ordering
+## Notes 
+- Passwords are hashed with password_hash()
+- Every item query is scoped by user_id so users can't access each other's data
